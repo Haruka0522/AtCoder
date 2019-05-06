@@ -1,0 +1,6 @@
+a = list(input())
+b = list(input())
+c = list(input())
+print(a[0],end="")
+print(b[1],end="")
+print(c[2])

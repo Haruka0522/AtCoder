@@ -1,0 +1,8 @@
+l1 = input().split()
+l2 = input().split()
+l3 = input().split()
+l4 = input().split()
+print(" ".join(l4[::-1]))
+print(" ".join(l3[::-1]))
+print(" ".join(l2[::-1]))
+print(" ".join(l1[::-1]))

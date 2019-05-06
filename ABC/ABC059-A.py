@@ -1,0 +1,5 @@
+A,B,C = map(list,input().split())
+initial_A = A[0].upper()
+initial_B = B[0].upper()
+initial_C = C[0].upper()
+print(initial_A+initial_B+initial_C)
