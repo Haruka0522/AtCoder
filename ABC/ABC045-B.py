@@ -10,14 +10,14 @@ while(True):
         else:
             who = A_cards[0]
             del A_cards[0]
-    elif(who == "b"):
+    if(who == "b"):
         if(len(B_cards)==0):
             print("B")
             exit()
         else:
             who = B_cards[0]
             del B_cards[0]
-    else:    
+    if(who == "c"):    
         if(len(C_cards)==0):
             print("C")
             exit()
