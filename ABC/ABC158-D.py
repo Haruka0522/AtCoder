@@ -1,24 +1,25 @@
-S = input()
+from collections import deque
+S = deque(list(input()))
 Q = int(input())
 rev = False
 for i in range(Q):
     query = input()
     if query == "1":
-        T = 1
         rev = not(rev)
     else:
         T,F,C = query.split()
         if rev:
             if F == "1":
-                S = S + C
+                S.append(C)
             else:
-                S = C + S
+                S.appendleft(C)
         else:
             if F == "1":
-                S = C + S
+                S.appendleft(C)
             else:
-                S = S + C
+                S.append(C)
 if rev:
     print("".join(list(reversed(S))))
 else:
-    print(S)
+    print("".join(S))
+
