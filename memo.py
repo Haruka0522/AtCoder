@@ -2,6 +2,7 @@
 from itertools import permutations, combinations
 from fractions import gcd
 from collections import Counter
+from collections import deque
 from math import sqrt
 import bisect
 import sys
