@@ -19,24 +19,17 @@ def base_10_to_N(x,n):
     return(str(x%n))
 def continual_letters(list_x):
     """example"""
-    """[2,2,2,2,4,4,5,5,5,8,8,8,8,8] => [4,2,3,5]"""
-    i,j = 0,0
+    """[2,2,2,2,4,4,5,5,5,8,8,8,8,8] => [(2, 1), (4, 1), (5, 1), (8, 5)]"""
     result = []
-    k = len(list_x) - 1
-    while(True):
-        A = list_x[i]
-        while(True):
-            print(j)
-            if list_x[j] != A:
-                break
-            if j >= k:
-                break
-            j += 1
-        result.append(j-i)
-        if i >= k:
-            break
-        i = j
-    result[-1] += 1
+    cnt = 1
+    for i in range(len(list_x)-1):
+        if list_x[i] == list_x[i+1]:
+            cnt += 1
+        else:
+            num = list_x[i]
+            cnt = 1
+            result.append((num,cnt))
+    result.append((list_x[-1],cnt))
     return result
 
 
