@@ -31,6 +31,14 @@ def continual_letters(list_x):
             result.append((num,cnt))
     result.append((list_x[-1],cnt))
     return result
+def is_prime(q):
+    import math
+    if q == 1:
+        return False
+    for k in range(2,int(math.sqrt(q)) + 1):
+        if q % k == 0:
+            return False
+    return True
 
 
 def main():
