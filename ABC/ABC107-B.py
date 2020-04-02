@@ -1,19 +1,17 @@
+import numpy as np
 H,W = map(int,input().split())
-S = []
-m = []
+grid = []
+ans = []
 for i in range(H):
-    S.append(list(input()))
-
-for i in S:
-    if(i.count(".")==len(i)):
-        S.remove(i)
-
-for i in range(W):
-    m = []
-    for j in S:
-        m.append(j[i])
-    if(m.count(".")==len(m)):
-        for k in S:
-            del k[i]
-
-print(S)
+    h = list(input())
+    if "#" in h:
+        grid.append(h)
+grid = np.array(grid)
+grid = grid.T
+for i in range(len(grid)):
+    w = grid[i]
+    if "#" in w:
+        ans.append(w)
+ans = np.array(ans).T
+for i in ans:
+    print("".join(i))
