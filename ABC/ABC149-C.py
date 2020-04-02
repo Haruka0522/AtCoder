@@ -1,14 +1,15 @@
 x = int(input())
 
-#コピペ
 def is_prime(q):
-    q = abs(q)
-    if q == 2: return True
-    if q < 2 or q&1 == 0: return False
-    return pow(2, q-1, q) == 1
-#コピペ終わり
+    import math
+    if q == 1:
+        return False
+    for k in range(2,int(math.sqrt(q)) + 1):
+        if q % k == 0:
+            return False
+    return True
 
-while(True):
+while True:
     if is_prime(x):
         print(x)
         exit()
