@@ -1,12 +1,10 @@
-# 未解決問題
-N, T = map(int, input().split())
-ans = 0
-mae = int(input())
-for i in range(N-1):
-    ima = int(input())
-    if (ima - mae > T):
-        ans += T
+N,T = map(int,input().split())
+N_li = [int(input()) for i in range(N)]
+flag = False
+ans = T
+for i in range(1,N):
+    if N_li[i-1] + T > N_li[i]:
+        ans += N_li[i] - N_li[i-1]
     else:
-        ans += (ima - mae + T)
-    mae = ima
+        ans += T
 print(ans)
