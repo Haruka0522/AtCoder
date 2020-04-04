@@ -19,7 +19,7 @@ def base_10_to_N(x,n):
     return(str(x%n))
 def continual_letters(list_x):
     """example"""
-    """[2,2,2,2,4,4,5,5,5,8,8,8,8,8] => [(2, 1), (4, 1), (5, 1), (8, 5)]"""
+    """[2,2,2,2,4,4,5,5,5,8,8,8,8,8] => [(2, 4), (4, 2), (5, 3), (8, 5)]"""
     result = []
     cnt = 1
     for i in range(len(list_x)-1):
@@ -27,8 +27,8 @@ def continual_letters(list_x):
             cnt += 1
         else:
             num = list_x[i]
-            cnt = 1
             result.append((num,cnt))
+            cnt = 1
     result.append((list_x[-1],cnt))
     return result
 def is_prime(q):
