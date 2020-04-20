@@ -1,9 +1,9 @@
-#無理
-from fractions import Fraction
-from math import log
 N,K = map(int,input().split())
-ans = Fraction(0,1)
+ans = 0
 for i in range(1,N+1):
-    omote = 
-    ans += Fraction(1,N) * (Fraction(1,2)**omote)
-print(ans)
+    t = 0
+    while i < K:
+        i *= 2
+        t += 1
+    ans += (1/2) ** t
+print((1/N)*ans)
