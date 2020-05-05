@@ -15,7 +15,6 @@ for h in range(H):
             ans.append(np.count_nonzero(mawari=="#"))
         else:
             ans.append("#")
-ans = np.array(ans).reshape(H,W)
-#print(ans)
+ans = np.array(ans).reshape(H,W).astype(np.unicode)
 for i in ans:
     print("".join(i))
