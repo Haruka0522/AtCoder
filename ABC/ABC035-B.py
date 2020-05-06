@@ -15,3 +15,5 @@ for ope in S:
         hatena += 1
 if T == 1:
     print(abs(now[0])+abs(now[1])+hatena)
+else:
+    print(max(len(S)%2,abs(now[0])+abs(now[1])-hatena))
