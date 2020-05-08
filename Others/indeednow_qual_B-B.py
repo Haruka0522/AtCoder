@@ -6,10 +6,11 @@ if len(s) != len(t):
     exit()
 s = deque(s)
 t = deque(t)
-for i,moji in enumerate(t):
+for i in range(len(s)):
     #print(s)
     if s == t:
         print(i)
         exit()
     s.appendleft(s[-1])
     s.pop()
+print(-1)
